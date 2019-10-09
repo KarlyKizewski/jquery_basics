@@ -1,0 +1,80 @@
+Change Background: Change the background color of '#target' by script.
+https://stackoverflow.com/questions/31109589/jquery-change-element-background-color-by-id-using-elementfrompoint
+$('#target').css("background-color","blue");
+
+Change Parent: Change the text in the span, a child of '#target'.
+https://stackoverflow.com/questions/31109589/jquery-change-element-background-color-by-id-using-elementfrompoint
+$('#target span').text('I am changed!');
+
+Create Clone: Create a clone of the span in '#target' and position it under the orgin.
+https://stackoverflow.com/questions/39057966/jquery-clone-several-li-and-append-at-a-specific-position-of-ul-not-its-end
+$('#target span').clone().insertAfter('#target span');
+
+User Filter: Chage background color of the second '.target'.
+$('.target').eq(1).css("background","white");
+
+Disable Button: Disable a button.
+$('.target button').attr('disable','disable');
+
+Uncheck, Check: Uncheck all boxes by script.
+https://stackoverflow.com/questions/5229023/jquery-check-uncheck-all-checkboxes-with-a-button
+$('.target input').removeAttr('checked');
+
+Change Parent: Move '#child' from '#parent1' to '#parent2'.
+https://stackoverflow.com/questions/2596833/how-to-move-child-element-from-one-parent-to-another-using-jquery
+$('#parent1 #child').appendTo('#parent2');
+
+Make a Textbox Read Only: Make the textbox in '#target' read-only.
+$('#target input').attr('readonly','readonly');
+
+Select A Option in A Selectbox: Select the second option in the selectbox by script.
+$('#target select option').eq(1).attr('selected','selected');
+
+Change Size: Make '#target' double size.
+https://api.jquery.com/width/
+var dub = $('#target');
+dub.css({height:dub.height()*2, width:dub.width()*2});
+
+Empty Elements: Remove all children and text of '#target'.
+https://api.jquery.com/empty/
+$('#target').empty();
+
+Delay: Show Alert with 1 second delay.(Use 'setTimeout').
+https://stackoverflow.com/questions/34336976/can-i-delay-an-alert-in-jquery
+setTimeout(function() { alert("1 second later..."); }, 1000);
+
+Count: Show the number of children in alert.
+https://api.jquery.com/size/
+https://api.jquery.com/children/
+contents?
+https://api.jquery.com/find/
+alert($('#target ').find('.child').size());
+
+Animate: Make '#target' double size with animation.
+https://stackoverflow.com/questions/7296955/jquery-animating-div-resize-on-click
+var dub = $('#target')
+dub.animate({height:dub.height()*2, width:dub.width()*2}, 1000);
+
+Alternate Color: Make the list-box color alternating.(Make odd options diffrent color).
+https://api.jquery.com/odd-selector/
+$('#target option:odd').css("background","red");
+
+Change Tag: Change the h2 to h3.
+https://api.jquery.com/change/
+https://api.jquery.com/text/
+var headline = $('#target h2');
+headline.change().text('Now h3');
+
+Replace String: Replace word 'cat' with 'dog'.
+var rep=$('#target');
+rep.html(rep.html().replace(/cat/g, "dog"));
+* had trouble with this one, mostly because of //g
+https://stackoverflow.com/questions/16970237/jquery-replace-g-do-not-work-for-me-but-others
+
+All But One: Remove all children of '#target' but h2.
+https://stackoverflow.com/questions/42284840/how-do-i-remove-all-elements-except-one-in-jquery
+$('#target').children().not('h2').remove();
+
+Without Children: Remove all 'div' whitch has no child elements.
+https://stackoverflow.com/questions/527246/use-jquery-to-remove-a-div-with-no-children
+$('div:empty').remove();
